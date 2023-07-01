@@ -11,6 +11,16 @@ public class Jugador : MonoBehaviour
     Vector3 mousePos2D;
     Vector3 mousePos3D;
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bola")
+        {
+            Vector3 direccion = collision.contacts[0].point - transform.position;
+            direccion = direccion.normalized;
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direccion;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
