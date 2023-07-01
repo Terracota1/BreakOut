@@ -10,7 +10,7 @@ public class Bloque_Acero : Bloque
     {
         resistencia = 10;
     }
-    public override void RebotarBola()
+    public override void RebotarBola(Collision collision)
     {
         base.RebotarBola();
     }
