@@ -10,7 +10,7 @@ public class Bloque_Madera : Bloque
         resistencia = 3;
     }
 
-    public override void RebotarBola(Collision collision)
+    public override void RebotarBola()
     {
         base.RebotarBola();
     }

@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 236450285}
   - component: {fileID: 236450284}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Vida (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,6 @@ GameObject:
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
-  - component: {fileID: 963194232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -495,27 +494,6 @@ MonoBehaviour:
   textoPuntajeAlto: {fileID: 0}
   textoActual: {fileID: 0}
   puntajeAltoSO: {fileID: 11400000, guid: c34a21cf33452d143ada7c332ee5790c, type: 2}
---- !u!114 &963194232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9df03ce9d260b049a813ad8da91e815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radio: -1
-  mantenerEnPantalla: 0
-  estaEnPantalla: 1
-  anchoCamara: 0
-  altoCamara: 0
-  salioDerecha: 0
-  salioIzquierda: 0
-  salioArriba: 0
-  salioAbajo: 0
 --- !u!1 &1127216671
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +506,7 @@ GameObject:
   - component: {fileID: 1127216674}
   - component: {fileID: 1127216673}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PuntajeActual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -662,7 +640,7 @@ GameObject:
   - component: {fileID: 1140273493}
   - component: {fileID: 1140273492}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,7 +715,7 @@ GameObject:
   - component: {fileID: 1241001229}
   - component: {fileID: 1241001228}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Vida (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1366,7 +1344,7 @@ GameObject:
   - component: {fileID: 2058502627}
   - component: {fileID: 2058502626}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PuntajeAlto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
