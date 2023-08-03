@@ -16,9 +16,10 @@ public class Bola : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        control = GetComponent<Control_Bordes>();
         isGameStarted = false;
         Vector3 posicionInicial = GameObject.FindGameObjectWithTag("Jugador").transform.position;
-        posicionInicial.y += 1;
+        posicionInicial.y += 2;
         this.transform.position = posicionInicial;
         this.transform.SetParent(GameObject.FindGameObjectWithTag("Jugador").transform);
         rigidBody = this.gameObject.GetComponent<Rigidbody>();

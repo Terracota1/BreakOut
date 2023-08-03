@@ -13,10 +13,10 @@ public class Puntaje : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transformPuntajeActual = GameObject.Find("PuntajeActual").transform;
-        transformPuntajeAlto = GameObject.Find("PuntajeAlto").transform;
-        textoActual = transformPuntajeActual.GetComponent<TMP_Text>();
-        textoPuntajeAlto = transformPuntajeAlto.GetComponent < TMP_Text>();
+        //transformPuntajeActual = GameObject.Find("PuntajeActual").transform;
+        //transformPuntajeAlto = GameObject.Find("PuntajeAlto").transform;
+        textoActual = GameObject.Find("PuntajeActual").GetComponent<TMP_Text>();
+        textoPuntajeAlto = GameObject.Find("PuntajeAlto").GetComponent<TMP_Text>();
         //if(PlayerPrefs.HasKey("PuntajeAlto"))
         //{
         //    //puntajeAlto = PlayerPrefs.GetInt("PuntajeAlto");
