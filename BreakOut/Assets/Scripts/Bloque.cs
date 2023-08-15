@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Bloque : MonoBehaviour
 {
-    public int resistencia = 1;
+    public int resistencia = 2;
     public UnityEvent AumentarPuntaje;
 
     public void OnCollisionEnter(Collision collision)
