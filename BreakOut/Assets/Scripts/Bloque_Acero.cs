@@ -8,7 +8,7 @@ public class Bloque_Acero : Bloque
     // Start is called before the first frame update
     void Start()
     {
-        resistencia = 10;
+        resistencia = 5;
     }
     public override void RebotarBola()
     {

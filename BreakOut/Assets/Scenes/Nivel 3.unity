@@ -2253,7 +2253,7 @@ MonoBehaviour:
   transformPuntajeActual: {fileID: 0}
   textoPuntajeAlto: {fileID: 0}
   textoActual: {fileID: 0}
-  puntajeAltoSO: {fileID: 11400000, guid: c34a21cf33452d143ada7c332ee5790c, type: 2}
+  puntajeAltoSO: {fileID: 11400000, guid: 50c44dc0b3cfea341bc95566fa4ea6b5, type: 2}
 --- !u!114 &963194232
 MonoBehaviour:
   m_ObjectHideFlags: 0
