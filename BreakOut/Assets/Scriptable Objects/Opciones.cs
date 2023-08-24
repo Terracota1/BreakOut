@@ -6,14 +6,29 @@ using UnityEngine;
 
 public class Opciones : PuntajePersistente
 {
-    public float velocidadBola = 30;
-    public dificultad NivelDificultad = dificultad.facil;
+    public float velocidadBola = 50f;
+    public Dificultad nivelDificultad = Dificultad.Facil;
 
-    public enum dificultad
+    public enum Dificultad
     {
-        facil,
-        normal,
-        dificil
+        Facil,
+        Normal,
+        Dificil
+    }
+
+    public float VelocidadPorDificultad(Dificultad dificultad)
+    {
+        switch (dificultad)
+        {
+            case Dificultad.Facil:
+                return 50f;
+            case Dificultad.Normal:
+                return 100f;
+            case Dificultad.Dificil:
+                return 200f;
+            default:
+                return 50f;
+        }
     }
 
     public void CambiarVelocidad(float nuevaVelocidad)
@@ -21,8 +36,14 @@ public class Opciones : PuntajePersistente
         velocidadBola = nuevaVelocidad;
     }
 
-    public void CambiarDificultad (int nuevaDificultad)
+    public void CambiarDificultad(int nuevaDificultad)
     {
-        NivelDificultad = (dificultad)nuevaDificultad;
+        nivelDificultad = (Dificultad)nuevaDificultad;
+        velocidadBola = VelocidadPorDificultad(nivelDificultad);
+    }
+
+    public float VelocidadActual
+    {
+        get { return VelocidadPorDificultad(nivelDificultad); }
     }
 }
