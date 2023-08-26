@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class Bloque_Cristal : Bloque
 {
-    //Tarea
+    public Opciones opciones;
 
-    // Start is called before the first frame update
+    void OnEnable()
+    {
+        opciones.OnDificultadChanged += ActualizarResistencia; 
+    }
+
+    void OnDisable()
+    {
+        opciones.OnDificultadChanged -= ActualizarResistencia; 
+    }
+
     void Start()
     {
-        resistencia = 1;
+        ActualizarResistencia(opciones.NivelDificultad); 
     }
+
+    void ActualizarResistencia(Opciones.dificultad dificultad)
+    {
+        switch (dificultad)
+        {
+            case Opciones.dificultad.facil:
+                resistencia = 1;
+                break;
+            case Opciones.dificultad.normal:
+                resistencia = 2;
+                break;
+            case Opciones.dificultad.dificil:
+                resistencia = 3;
+                break;
+        }
+    }
+
     public override void RebotarBola()
     {
         base.RebotarBola();
     }
 }
+
