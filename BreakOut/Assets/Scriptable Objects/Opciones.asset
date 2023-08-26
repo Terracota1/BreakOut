@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdf79b8bff76a1409a5239e986eb370, type: 3}
   m_Name: Opciones
   m_EditorClassIdentifier: 
-  velocidadBola: 30
+  velocidadBola: 1
   NivelDificultad: 0

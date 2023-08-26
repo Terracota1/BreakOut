@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class Opciones : PuntajePersistente
 {
     public float velocidadBola = 30;
     public dificultad NivelDificultad = dificultad.facil;
+
+    public event Action<dificultad> OnDificultadChanged;  // Evento para notificar cambios de dificultad
 
     public enum dificultad
     {
@@ -19,7 +22,6 @@ public class Opciones : PuntajePersistente
     {
         velocidadBola = nuevaVelocidad;
 
-        // Encuentra el objeto con el script Bola y actualiza su velocidad
         Bola bola = FindObjectOfType<Bola>();
         if (bola != null)
         {
@@ -30,5 +32,7 @@ public class Opciones : PuntajePersistente
     public void CambiarDificultad(int nuevaDificultad)
     {
         NivelDificultad = (dificultad)nuevaDificultad;
+        OnDificultadChanged?.Invoke(NivelDificultad);  // Invocar el evento
     }
 }
+
