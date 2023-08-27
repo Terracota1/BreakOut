@@ -9,7 +9,7 @@ public class Opciones : PuntajePersistente
     public float velocidadBola = 30;
     public dificultad NivelDificultad = dificultad.facil;
 
-    public event Action<dificultad> OnDificultadChanged;  // Evento para notificar cambios de dificultad
+    public event Action<dificultad> OnDificultadChanged;  
 
     public enum dificultad
     {
@@ -32,7 +32,7 @@ public class Opciones : PuntajePersistente
     public void CambiarDificultad(int nuevaDificultad)
     {
         NivelDificultad = (dificultad)nuevaDificultad;
-        OnDificultadChanged?.Invoke(NivelDificultad);  // Invocar el evento
+        OnDificultadChanged?.Invoke(NivelDificultad); 
     }
 }
 

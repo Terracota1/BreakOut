@@ -13,7 +13,6 @@ public class Bola : MonoBehaviour
     private Control_Bordes control;
     public UnityEvent BolaDestruida;
 
-    // Start is called before the first frame update
     void Start()
     {
         control = GetComponent<Control_Bordes>();
@@ -25,7 +24,6 @@ public class Bola : MonoBehaviour
         rigidBody = this.gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (control.salioAbajo)
